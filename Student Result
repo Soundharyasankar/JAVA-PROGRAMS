@@ -1,0 +1,23 @@
+public class studentpass {
+   private String name;
+   private int grade;
+   public studentpass(String var1, int var2) {
+      this.name = var1;
+      this.grade = var2;
+   }
+   public boolean isPassed() {
+      return this.grade >= 40;
+   }
+   public void displayresult() {
+      System.out.println("Student Name: " + this.name);
+      System.out.println("Grade : " + this.grade);
+      if (this.isPassed()) {
+         System.out.println("Result : Passed");
+      }
+      System.out.println("Result : Failed");
+   }
+   public static void main(String[] var0) {
+      studentpass var1 = new studentpass("Alice", 35);
+      var1.displayresult();
+   }
+}
