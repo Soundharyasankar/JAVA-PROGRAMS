@@ -1,0 +1,28 @@
+public class Student {
+   private String name;
+   private int totalClasses;
+   private int attendedClasses;
+   public Student(String var1) {
+      this.name = var1;
+   }
+   public void SetTotalClasses(int var1) {
+      this.totalClasses = var1;
+   }
+   public void AttendedClasses(int var1) {
+      this.attendedClasses = var1;
+   }
+   public double getAttendancePercentage() {
+      return this.totalClasses == 0 ? 0.0 : (double)this.attendedClasses * 100.0 / (double)this.totalClasses;
+   }
+   public void displayAttendance() {
+      System.out.println("Student Name : " + this.name);
+      System.out.println("Classes Attended : " + this.attendedClasses);
+      System.out.printf("Attendance Percentage :%.2f%%", this.getAttendancePercentage());
+   }
+   public static void main(String[] var0) {
+      Student var1 = new Student("John");
+      var1.SetTotalClasses(10);
+      var1.AttendedClasses(7);
+      var1.displayAttendance();
+   }
+}
